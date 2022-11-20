@@ -2,6 +2,7 @@ library(shiny)
 library(dplyr)
 library(usmap)
 library(ggplot2)
+library(shinythemes)
 
 #read in bluebike data 
 #https://data.boston.gov/dataset/blue-bike-stations/resource/d0121b02-ac37-4426-a42b-4a6d18d8676d
