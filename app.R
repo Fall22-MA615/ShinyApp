@@ -8,7 +8,7 @@ library(ggplot2)
 
 
 blue <- read.csv("/Users/jiunlee/MSSP22/MA615/Projects/ShinyApp/Blue_Bike_Stations.csv")
-blue <- data[,-8] #remove unecessary column
+blue <- blue[,-8] #remove unecessary column
 
 #find empty cells in District column and insert correct one
 grep("^[[:space:]]*$",blue$District)
