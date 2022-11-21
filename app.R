@@ -32,17 +32,18 @@ blue$fips <- ifelse(blue$County=="Suffolk", "25025", ifelse(blue$County=="Essex"
 ui <- navbarPage("BLUE BIKE STATIONS", collapsible = TRUE, inverse = TRUE, theme = shinytheme("cerulean"),
                  tabPanel("1",
                           fluidPage(
-                            titlePanel("Frequency of BlueBike Docks"),   
-                            plotOutput("map"))),
+                            titlePanel("?")))
+                          ,
                  tabPanel("2",
                           fluidPage(
                             titlePanel("Table"),   
                             tableOutput("table"))),
                  tabPanel("3",
                           fluidPage(
-                            titlePanel("?"),   
+                            titlePanel("Frequency of BlueBike Docks"),   
+                            plotOutput("map")))
                             
-                           )))
+                           )
 
 server <- function(input, output, session) {
   output$table <- renderTable(head(blue))
